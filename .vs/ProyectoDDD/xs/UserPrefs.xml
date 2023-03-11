@@ -1,0 +1,41 @@
+﻿<Properties StartupConfiguration="{EE4EF8FF-A042-4F0F-B16F-3FE19A690CCE}|PyectoDDD">
+  <MultiItemStartupConfigurations />
+  <MonoDevelop.Ide.ItemProperties.Infraestructura.Catering.DDD.Infraestructura FirstBuild="True" />
+  <MonoDevelop.Ide.ItemProperties.API.ProyectoDDD FirstBuild="True" PreferredExecutionTarget="/Applications/Microsoft Edge.app" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Catering.DDD.Dominio/Encargado/ObjetosdeValor/ObjetosdeValorBarman/DatosPersonalesBarman.cs">
+    <Files>
+      <File FileName="Catering.DDD.Dominio/Encargado/ObjetosdeValor/ObjetosdeValorBarman/DatosPersonalesBarman.cs" Line="36" Column="27" />
+    </Files>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State name="__root__">
+          <Node name="ProyectoDDD" expanded="True">
+            <Node name="Dominio" expanded="True">
+              <Node name="Catering.DDD.Dominio" expanded="True">
+                <Node name="Encargado" expanded="True">
+                  <Node name="Entidades" expanded="True" />
+                  <Node name="ObjetosdeValor" expanded="True">
+                    <Node name="ObjetosdeValorBarman" expanded="True">
+                      <Node name="DatosPersonalesBarman.cs" selected="True" />
+                    </Node>
+                    <Node name="ObjetosdeValorEncargado" expanded="True" />
+                    <Node name="ObjetosdeValorMesero" expanded="True" />
+                  </Node>
+                </Node>
+                <Node name="Evento" expanded="True">
+                  <Node name="ObjetosdeValor" expanded="True" />
+                </Node>
+              </Node>
+            </Node>
+          </Node>
+        </State>
+      </Pad>
+    </Pads>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.ItemProperties.Dominio.Catering.DDD.Dominio FirstBuild="True" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+</Properties>

@@ -1,0 +1,6 @@
+﻿<Properties StartupConfiguration="{EE4EF8FF-A042-4F0F-B16F-3FE19A690CCE}|Default">
+  <MonoDevelop.Ide.ItemProperties.Dominio.Catering.DDD.Dominio FirstBuild="True" />
+  <MultiItemStartupConfigurations />
+  <MonoDevelop.Ide.ItemProperties.API.PyectoDDD FirstBuild="True" PreferredExecutionTarget="/Applications/Microsoft Edge.app" />
+  <MonoDevelop.Ide.ItemProperties.Infraestructura.Catering.DDD.Infraestructura FirstBuild="True" />
+</Properties>
