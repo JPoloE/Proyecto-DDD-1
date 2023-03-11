@@ -31,13 +31,11 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Evento\" />
-    <Folder Include="Encargado\" />
     <Folder Include="Chef\" />
     <Folder Include="Chef\Entidades\" />
     <Folder Include="Chef\Repositorios\" />
     <Folder Include="Chef\ObjetosdeValor\" />
     <Folder Include="Encargado\Entidades\" />
-    <Folder Include="Encargado\Repositorios\" />
     <Folder Include="Encargado\ObjetosdeValor\" />
     <Folder Include="Evento\Entidades\" />
     <Folder Include="Evento\Respositorios\" />
