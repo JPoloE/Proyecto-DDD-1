@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\jesus\\source\\repos\\Proyecto-DDD-1\\Catering.DDD.Dominio\\Catering.DDD.Dominio.csproj": {}
+    "C:\\Users\\jesus\\source\\repos\\Proyecto-DDD-1\\PyectoDDD\\ProyectoDDD.csproj": {}
   },
   "projects": {
-    "C:\\Users\\jesus\\source\\repos\\Proyecto-DDD-1\\Catering.DDD.Dominio\\Catering.DDD.Dominio.csproj": {
+    "C:\\Users\\jesus\\source\\repos\\Proyecto-DDD-1\\PyectoDDD\\ProyectoDDD.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\jesus\\source\\repos\\Proyecto-DDD-1\\Catering.DDD.Dominio\\Catering.DDD.Dominio.csproj",
-        "projectName": "Catering.DDD.Dominio",
-        "projectPath": "C:\\Users\\jesus\\source\\repos\\Proyecto-DDD-1\\Catering.DDD.Dominio\\Catering.DDD.Dominio.csproj",
+        "projectUniqueName": "C:\\Users\\jesus\\source\\repos\\Proyecto-DDD-1\\PyectoDDD\\ProyectoDDD.csproj",
+        "projectName": "CasosdeUso.DDD.Dominio",
+        "projectPath": "C:\\Users\\jesus\\source\\repos\\Proyecto-DDD-1\\PyectoDDD\\ProyectoDDD.csproj",
         "packagesPath": "C:\\Users\\jesus\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\jesus\\source\\repos\\Proyecto-DDD-1\\Catering.DDD.Dominio\\obj\\",
+        "outputPath": "C:\\Users\\jesus\\source\\repos\\Proyecto-DDD-1\\CasosdeUso.DDD.Dominio\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -44,6 +44,12 @@
       "frameworks": {
         "net6.0": {
           "targetAlias": "net6.0",
+          "dependencies": {
+            "Swashbuckle.AspNetCore": {
+              "target": "Package",
+              "version": "[6.2.3, )"
+            }
+          },
           "imports": [
             "net461",
             "net462",
@@ -56,6 +62,9 @@
           "assetTargetFallback": true,
           "warn": true,
           "frameworkReferences": {
+            "Microsoft.AspNetCore.App": {
+              "privateAssets": "none"
+            },
             "Microsoft.NETCore.App": {
               "privateAssets": "all"
             }
