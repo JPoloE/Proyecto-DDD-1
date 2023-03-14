@@ -1,7 +1,7 @@
 ﻿using System;
 namespace Catering.DDD.Dominio.Chef.ObjetosdeValor.ObjetosdeValorChef
 {
-	public record DatosPersonalesChef
+	public class DatosPersonalesChef
 	{
 		public string Nombre { get; init; }
 		public double Cedula { get; init; }

@@ -1,13 +1,16 @@
 ﻿using System;
+using Catering.DDD.Dominio.Chef.Eventos;
 using Catering.DDD.Dominio.Chef.ObjetosdeValor.ObjetodeValorCocinero;
 using Catering.DDD.Dominio.Chef.ObjetosdeValor.ObjetosdeValorChef;
+using Catering.DDD.Dominio.Chef.ObjetosdeValor.ObjetosdeValorMenu;
+using Catering.DDD.Dominio.Comandos;
 using Catering.DDD.Dominio.Menu.ObjetosdeValor.ObjetosdeValorMenu;
 
 namespace Catering.DDD.Dominio.Chef.Entidades
 {
-	public class Chef
+	public class Chef : AgregarEvento<ChefID>
 	{
-		public Guid Id { get; init; }
+		public ChefID Id { get; init; }
 		public DatosPersonalesChef DatosPersonales { get; private set; }
 		public EspecialidadChef Especialidad { get; private set; }
 		public ContratoChef Contrato{ get; private set; }
@@ -15,28 +18,80 @@ namespace Catering.DDD.Dominio.Chef.Entidades
 		public virtual List<Cocinero>? Cocineros { get; private set; }
 		public virtual Menu menu { get; private set; }
 
-        public Chef(Guid id)
+        public Chef(ChefID id) : base(id)
 		{
-			this.Id = id;
+			AppendChange(new ChefCreado(id.ToString())); 
 		}
 
-		public void SetDatosPersonales(DatosPersonalesChef datosPersonales)
+        #region Metodos del agregado como manejador de eventos
+        public void SetDatosPersonales(DatosPersonalesChef datosPersonales) 
+		{
+			AppendChange(new DatosPersonalesdeChefAgregados(datosPersonales));
+		}
+
+		public void SetContrato(ContratoChef contratoChef) 
+		{
+			AppendChange(new ContratodeChefAgregado(contratoChef));
+		}
+
+        public void SetEspecialidad(EspecialidadChef especialidadChef)
+        {
+			AppendChange(new EspecialidaddeChefAgregada(especialidadChef));
+        }
+
+		public void SetCocinero(Cocinero cocinero) 
+		{
+			AppendChange(new CocineroAgregado(cocinero));
+		}
+
+		public void SetMenu(Menu menu)
+		{
+			AppendChange(new MenuAgregado(menu));
+		}
+
+		public void AgregarPlatilloMenu(Platillo platillo)
+		{
+			AppendChange(new PlatilloMenuAgregado(platillo));
+		}
+
+		public void AgregarTipoMenu(Tipo tipo)
+		{
+			AppendChange(new TipoMenuAgregado(tipo));
+		}
+
+		public void AgregarDatosPersonalesCocinero(DatosPersonalesCocinero datosPersonales)
+		{
+			AppendChange(new DatosPersonalesCocineroAgregados(datosPersonales));
+		}
+
+		public void AgregarEspecialidadCocinero(EspecialidadCocinero especialidad)
+		{
+			AppendChange(new EspecialidadCocineroAgregada(especialidad));
+		}
+
+		public void AgregarContratoCocinero(ContratoCocinero contrato)
+		{
+			AppendChange(new ContratoCocineroAgregado(contrato));
+		}
+
+
+
+        public void SetDatosPersonalesAgregate(DatosPersonalesChef datosPersonales)
 		{
 			this.DatosPersonales = datosPersonales;
-		
 		}
 
-		public void SetEspecialidad(EspecialidadChef especialidad)
+		public void SetEspecialidadAgregate(EspecialidadChef especialidad)
 		{
 			this.Especialidad = especialidad;
 		}
 
-		public void SetContrato(ContratoChef contrato)
+		public void SetContratoAgregate(ContratoChef contrato)
 		{
 			this.Contrato = contrato;
 		}
 
-		public void AgregarCocinero(Cocinero cocinero)
+		public void AgregarCocineroAgregate(Cocinero cocinero)
 		{
 			this.Cocineros.Add(cocinero);
 			
@@ -52,7 +107,7 @@ namespace Catering.DDD.Dominio.Chef.Entidades
 			this.menuID = menuID;
 		}
 
-		public void SetMenu(Menu menu)
+		public void SetMenuAgregate(Menu menu)
 		{
 			this.menu = menu;
 		}

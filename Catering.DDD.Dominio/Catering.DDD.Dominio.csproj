@@ -31,7 +31,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Evento\" />
-    <Folder Include="Chef\" />
     <Folder Include="Chef\Entidades\" />
     <Folder Include="Chef\Repositorios\" />
     <Folder Include="Chef\ObjetosdeValor\" />

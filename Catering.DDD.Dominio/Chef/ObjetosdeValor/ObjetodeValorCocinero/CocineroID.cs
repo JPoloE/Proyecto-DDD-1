@@ -1,26 +1,22 @@
 ﻿using System;
 using Catering.DDD.Dominio.Chef.ObjetosdeValor.ObjetosdeValorChef;
+using Catering.DDD.Dominio.Comandos;
 
 namespace Catering.DDD.Dominio.Chef.ObjetosdeValor.ObjetodeValorCocinero
 {
-	public record CocineroID
+	public class CocineroID : Identidad
 	{
-        public Guid value { get; init; }
 
-        internal CocineroID(Guid value_)
+        internal CocineroID(Guid id) : base(id)
         {
-            value = value_;
+  
         }
 
-        public static CocineroID Create(Guid value)
+        public static CocineroID Of(Guid id)
         {
-            return new CocineroID(value);
+            return new CocineroID(id);
         }
 
-        public static implicit operator Guid(CocineroID cocineroID)
-        {
-            return cocineroID.value;
-        }
     }
 }
 

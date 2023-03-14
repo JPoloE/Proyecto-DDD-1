@@ -1,22 +1,16 @@
-﻿using System;
+﻿using Catering.DDD.Dominio.Comandos;
+using System;
 namespace Catering.DDD.Dominio.Chef.ObjetosdeValor.ObjetosdeValorChef
 {
-	public record ChefID
+	public class ChefID : Identidad
 	{
-		public Guid value { get; init; }
+	
+		public ChefID(Guid id) : base(id){}
 
-		internal ChefID(Guid value_)
-		{
-			value = value_;
+		public static ChefID Of(Guid id) {
+			return new ChefID(id);
 		}
 
-		public static ChefID Create(Guid value) {
-			return new ChefID(value);
-		}
-
-		public static implicit operator Guid(ChefID chefID){
-			return chefID.value;
-		}
 	}
 }
 

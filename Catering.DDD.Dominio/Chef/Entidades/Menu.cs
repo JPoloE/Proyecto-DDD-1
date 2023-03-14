@@ -1,17 +1,18 @@
 ﻿using System;
 using Catering.DDD.Dominio.Chef.ObjetosdeValor.ObjetosdeValorMenu;
+using Catering.DDD.Dominio.Comandos;
+using Catering.DDD.Dominio.Menu.ObjetosdeValor.ObjetosdeValorMenu;
 
 namespace Catering.DDD.Dominio.Chef.Entidades
 {
-	public class Menu
+	public class Menu : Entidad<MenuID>
 	{
-		public Guid Id { get; init; }
 		public Platillo Platillo { get; private set; }
 		public Tipo Tipo { get; private set; }
 
-		public Menu(Guid id)
+		public Menu(MenuID id): base(id)
 		{
-			this.Id = id;
+
 		}
 
 		public void SetPlatillo(Platillo platillo)
