@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Catering.DDD.Dominio.Chef.Comandos
 {
-    internal class AgregarCocineroComando
+    public class AgregarCocineroComando
     {
         public string CocineroId { get; set; }
     }

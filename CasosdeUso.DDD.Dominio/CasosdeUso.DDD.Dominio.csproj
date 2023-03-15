@@ -7,8 +7,12 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Folder Include="Gateways\" />
-    <Folder Include="CasosdeUso\" />
+    <PackageReference Include="Ardalis.Specification" Version="6.1.0" />
+    <PackageReference Include="Newtonsoft.Json" Version="13.0.3" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Catering.DDD.Dominio\Catering.DDD.Dominio.csproj" />
   </ItemGroup>
 
 </Project>

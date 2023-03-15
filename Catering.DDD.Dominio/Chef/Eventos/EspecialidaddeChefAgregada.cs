@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace Catering.DDD.Dominio.Chef.Eventos
 {
-    internal class EspecialidaddeChefAgregada : EventodeDominio
+    public class EspecialidaddeChefAgregada : EventodeDominio
     {
         public EspecialidadChef Especialidad { get; set; }
 

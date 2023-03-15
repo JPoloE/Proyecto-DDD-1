@@ -1,0 +1,6 @@
+C:\Users\jesus\source\repos\Proyecto-DDD-1\PyectoDDD\obj\Debug\net6.0\ProyectoDDD.csproj.AssemblyReference.cache
+C:\Users\jesus\source\repos\Proyecto-DDD-1\PyectoDDD\obj\Debug\net6.0\ProyectoDDD.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\jesus\source\repos\Proyecto-DDD-1\PyectoDDD\obj\Debug\net6.0\ProyectoDDD.AssemblyInfoInputs.cache
+C:\Users\jesus\source\repos\Proyecto-DDD-1\PyectoDDD\obj\Debug\net6.0\ProyectoDDD.AssemblyInfo.cs
+C:\Users\jesus\source\repos\Proyecto-DDD-1\PyectoDDD\obj\Debug\net6.0\ProyectoDDD.csproj.CoreCompileInputs.cache
+C:\Users\jesus\source\repos\Proyecto-DDD-1\PyectoDDD\obj\Debug\net6.0\PyectoDDD.MvcApplicationPartsAssemblyInfo.cache

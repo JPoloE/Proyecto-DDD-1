@@ -20,10 +20,13 @@ namespace Catering.DDD.Dominio.Chef.Entidades
 
         public Chef(ChefID id) : base(id)
 		{
-			AppendChange(new ChefCreado(id.ToString())); 
+			this.Id = id;
 		}
 
-        #region Metodos del agregado como manejador de eventos
+		public void SetChefID(ChefID chefID)
+		{
+			AppendChange(new ChefCreado(Id.ToString()));
+		}
         public void SetDatosPersonales(DatosPersonalesChef datosPersonales) 
 		{
 			AppendChange(new DatosPersonalesdeChefAgregados(datosPersonales));
@@ -114,4 +117,3 @@ namespace Catering.DDD.Dominio.Chef.Entidades
 		
 	}
 }
-

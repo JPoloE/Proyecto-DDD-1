@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.4.33213.308
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ProyectoDDD", "PyectoDDD\ProyectoDDD.csproj", "{EE4EF8FF-A042-4F0F-B16F-3FE19A690CCE}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PyectoDDD", "PyectoDDD\PyectoDDD.csproj", "{EE4EF8FF-A042-4F0F-B16F-3FE19A690CCE}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "API", "API", "{06FDDB79-C097-48FC-9A01-43C667AA17A0}"
 EndProject
@@ -15,7 +15,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Catering.DDD.Dominio", "Cat
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Catering.DDD.Infraestructura", "Catering.DDD.Infraestructura\Catering.DDD.Infraestructura.csproj", "{415C9E16-1B82-4559-8514-64C583201744}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CasosdeUso.DDD.Dominio", "CasosdeUso.DDD.Dominio\CasosdeUso.DDD.Dominio.csproj", "{20AA89A6-14F5-414C-8AD9-6692203A7991}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CasosdeUso.DDD.Dominio", "CasosdeUso.DDD.Dominio\CasosdeUso.DDD.Dominio.csproj", "{20AA89A6-14F5-414C-8AD9-6692203A7991}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

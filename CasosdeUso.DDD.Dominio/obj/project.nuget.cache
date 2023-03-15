@@ -1,8 +1,11 @@
 {
   "version": 2,
-  "dgSpecHash": "TN1Abfbh/8FbhHus2xwrsnBG4I3XPJO/npkFYp84B4syT+LxwuN+E5Ty7i4EshUTk+U506H9JnqeusGQreXoEQ==",
+  "dgSpecHash": "g08AavttvO+14b9MPRxEVDKuDuQi1dn9thWLHvHCobKqqceVs/NW/y2L4fBCKd+2WSPV67BMeSq1fMEF/GBNrQ==",
   "success": true,
   "projectFilePath": "C:\\Users\\jesus\\source\\repos\\Proyecto-DDD-1\\CasosdeUso.DDD.Dominio\\CasosdeUso.DDD.Dominio.csproj",
-  "expectedPackageFiles": [],
+  "expectedPackageFiles": [
+    "C:\\Users\\jesus\\.nuget\\packages\\ardalis.specification\\6.1.0\\ardalis.specification.6.1.0.nupkg.sha512",
+    "C:\\Users\\jesus\\.nuget\\packages\\newtonsoft.json\\13.0.3\\newtonsoft.json.13.0.3.nupkg.sha512"
+  ],
   "logs": []
 }

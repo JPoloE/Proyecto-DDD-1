@@ -1,0 +1,15 @@
+C:\Users\jesus\source\repos\Proyecto-DDD-1\CasosdeUso.DDD.Dominio\obj\Debug\net6.0\CasosdeUso.DDD.Dominio.csproj.AssemblyReference.cache
+C:\Users\jesus\source\repos\Proyecto-DDD-1\CasosdeUso.DDD.Dominio\obj\Debug\net6.0\CasosdeUso.DDD.Dominio.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\jesus\source\repos\Proyecto-DDD-1\CasosdeUso.DDD.Dominio\obj\Debug\net6.0\CasosdeUso.DDD.Dominio.AssemblyInfoInputs.cache
+C:\Users\jesus\source\repos\Proyecto-DDD-1\CasosdeUso.DDD.Dominio\obj\Debug\net6.0\CasosdeUso.DDD.Dominio.AssemblyInfo.cs
+C:\Users\jesus\source\repos\Proyecto-DDD-1\CasosdeUso.DDD.Dominio\obj\Debug\net6.0\CasosdeUso.DDD.Dominio.csproj.CoreCompileInputs.cache
+C:\Users\jesus\source\repos\Proyecto-DDD-1\CasosdeUso.DDD.Dominio\bin\Debug\net6.0\CasosdeUso.DDD.Dominio.deps.json
+C:\Users\jesus\source\repos\Proyecto-DDD-1\CasosdeUso.DDD.Dominio\bin\Debug\net6.0\CasosdeUso.DDD.Dominio.dll
+C:\Users\jesus\source\repos\Proyecto-DDD-1\CasosdeUso.DDD.Dominio\bin\Debug\net6.0\CasosdeUso.DDD.Dominio.pdb
+C:\Users\jesus\source\repos\Proyecto-DDD-1\CasosdeUso.DDD.Dominio\bin\Debug\net6.0\Catering.DDD.Dominio.dll
+C:\Users\jesus\source\repos\Proyecto-DDD-1\CasosdeUso.DDD.Dominio\bin\Debug\net6.0\Catering.DDD.Dominio.pdb
+C:\Users\jesus\source\repos\Proyecto-DDD-1\CasosdeUso.DDD.Dominio\obj\Debug\net6.0\CasosdeUso.DDD.Dominio.csproj.CopyComplete
+C:\Users\jesus\source\repos\Proyecto-DDD-1\CasosdeUso.DDD.Dominio\obj\Debug\net6.0\CasosdeUso.DDD.Dominio.dll
+C:\Users\jesus\source\repos\Proyecto-DDD-1\CasosdeUso.DDD.Dominio\obj\Debug\net6.0\refint\CasosdeUso.DDD.Dominio.dll
+C:\Users\jesus\source\repos\Proyecto-DDD-1\CasosdeUso.DDD.Dominio\obj\Debug\net6.0\CasosdeUso.DDD.Dominio.pdb
+C:\Users\jesus\source\repos\Proyecto-DDD-1\CasosdeUso.DDD.Dominio\obj\Debug\net6.0\ref\CasosdeUso.DDD.Dominio.dll

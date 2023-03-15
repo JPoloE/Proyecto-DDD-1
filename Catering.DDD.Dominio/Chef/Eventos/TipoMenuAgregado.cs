@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace Catering.DDD.Dominio.Chef.Eventos
 {
-    internal class TipoMenuAgregado : EventodeDominio
+    public class TipoMenuAgregado : EventodeDominio
     {
         public Tipo Tipo { get; set; }
 
