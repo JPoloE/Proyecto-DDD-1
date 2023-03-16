@@ -19,5 +19,15 @@ namespace Catering.DDD.Dominio.Generics
         public string AggregateId { get; set; }
 
         public string EventBody { get; set; }
+
+        public StoredEvent(int storedId, string storedName, string aggregateId, string eventBody)
+        {
+            StoredId = storedId;
+            StoredName = storedName;
+            AggregateId = aggregateId;
+            EventBody = eventBody;
+        }
+
+        public StoredEvent() { }
     }
 }
