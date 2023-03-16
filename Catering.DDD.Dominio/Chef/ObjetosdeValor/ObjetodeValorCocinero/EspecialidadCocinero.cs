@@ -9,6 +9,7 @@ namespace Catering.DDD.Dominio.Chef.ObjetosdeValor.ObjetodeValorCocinero
         {
             this.Value = value;
         }
+        public EspecialidadCocinero() { }
 
         public static EspecialidadCocinero Create(string value)
         {

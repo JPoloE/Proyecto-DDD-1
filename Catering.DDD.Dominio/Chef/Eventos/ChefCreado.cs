@@ -9,9 +9,9 @@ namespace Catering.DDD.Dominio.Chef.Eventos
 {
     public class ChefCreado : EventodeDominio
     {
-        public String ChefID { get; init; }
+        public string ChefID { get; init; }
 
-        public ChefCreado(String chefID) : base("Chef.creado")
+        public ChefCreado(string chefID) : base("Chef.creado")
         {
             ChefID = chefID;
         }

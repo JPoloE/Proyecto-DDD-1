@@ -18,6 +18,8 @@ namespace Catering.DDD.Dominio.Chef.ObjetosdeValor.ObjetodeValorCocinero
             this.Idiomas = idiomas;
         }
 
+        public DatosPersonalesCocinero() { }
+
         public static DatosPersonalesCocinero Create(string nombre, double cedula, string celular, string experiencia, string idiomas)
         {
             validate(nombre);

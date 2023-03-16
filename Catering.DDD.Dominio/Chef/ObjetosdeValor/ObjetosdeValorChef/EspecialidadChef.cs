@@ -9,12 +9,14 @@ namespace Catering.DDD.Dominio.Chef.ObjetosdeValor.ObjetosdeValorChef
 		{
 			this.Value = value;
 		}
-
+        public EspecialidadChef() { }
         public static EspecialidadChef Create(string value)
         {
             validate(value);
             return new EspecialidadChef(value);
         }
+
+
 
         //Validación de los objetos de valor de chef
         public static void validate(string s)

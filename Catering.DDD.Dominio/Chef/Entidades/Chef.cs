@@ -14,8 +14,7 @@ namespace Catering.DDD.Dominio.Chef.Entidades
 		public DatosPersonalesChef DatosPersonales { get; private set; }
 		public EspecialidadChef Especialidad { get; private set; }
 		public ContratoChef Contrato{ get; private set; }
-		public MenuID menuID { get; private set; }
-		public virtual List<Cocinero>? Cocineros { get; private set; }
+		public virtual Cocinero Cocinero { get; private set; }
 		public virtual Menu menu { get; private set; }
 
         public Chef(ChefID id) : base(id)
@@ -96,18 +95,7 @@ namespace Catering.DDD.Dominio.Chef.Entidades
 
 		public void AgregarCocineroAgregate(Cocinero cocinero)
 		{
-			this.Cocineros.Add(cocinero);
-			
-		}
-
-		public void SetCocineros(List<Cocinero> cocineros)
-		{
-			this.Cocineros = cocineros;
-		}
-
-		public void SetMenuID(MenuID menuID)
-		{
-			this.menuID = menuID;
+			this.Cocinero = cocinero;
 		}
 
 		public void SetMenuAgregate(Menu menu)

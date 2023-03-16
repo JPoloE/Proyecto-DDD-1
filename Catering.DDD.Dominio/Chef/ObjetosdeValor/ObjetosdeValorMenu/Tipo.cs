@@ -11,6 +11,7 @@ namespace Catering.DDD.Dominio.Chef.ObjetosdeValor.ObjetosdeValorMenu
             this.TipoMenu = tipoMenu;
             this.Detalles = detalles;
         }
+        public Tipo() { }
 
         public static Tipo Create(string tipoMenu, string detalles)
         {

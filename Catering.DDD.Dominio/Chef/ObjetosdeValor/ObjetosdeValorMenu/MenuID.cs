@@ -4,9 +4,9 @@ namespace Catering.DDD.Dominio.Menu.ObjetosdeValor.ObjetosdeValorMenu
 {
 	public class MenuID : Identidad
 	{
-		public Guid value { get; init; }
 
-		internal MenuID(Guid value_) : base(value_)
+
+		internal MenuID(Guid Id) : base(Id)
 		{
 	
 		}

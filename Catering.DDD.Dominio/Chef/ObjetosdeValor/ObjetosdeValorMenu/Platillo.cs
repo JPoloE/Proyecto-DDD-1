@@ -16,6 +16,8 @@ namespace Catering.DDD.Dominio.Chef.ObjetosdeValor.ObjetosdeValorMenu
             this.Tipo = tipo;
         }
 
+        public Platillo() { }
+
         public static Platillo Create(string nombrePlatillo, double cantidad, string restriccion, string tipo)
         {
             validate(nombrePlatillo);

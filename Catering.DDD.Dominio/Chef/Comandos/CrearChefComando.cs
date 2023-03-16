@@ -13,9 +13,11 @@ namespace Catering.DDD.Dominio.Chef.Comandos
         public string Correo { get; set; }
         public string Experiencia { get; set; }
         public string Idiomas { get; set; }
+        public string TipoContrato { get; init; }
+        public string FormaPago { get; init; }
         public string Especialidad { get; set; }
 
-        public CrearChefComando(string nombre, int cedula, string correo, string experiencia, string idiomas, string especialidad) 
+        public CrearChefComando(string nombre, int cedula, string correo, string experiencia, string idiomas, string tipoContrato, string formaPago, string especialidad) 
         {
             Nombre = nombre;
             Cedula = cedula;
@@ -23,6 +25,8 @@ namespace Catering.DDD.Dominio.Chef.Comandos
             Experiencia = experiencia;
             Idiomas = idiomas;
             Especialidad = especialidad;
+            TipoContrato = tipoContrato;
+            FormaPago = formaPago;
         }
 
     }

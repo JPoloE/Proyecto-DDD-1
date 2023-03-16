@@ -1,7 +1,7 @@
 ﻿using System;
 namespace Catering.DDD.Dominio.Chef.ObjetosdeValor.ObjetosdeValorChef
 {
-	public class DatosPersonalesChef
+	public record DatosPersonalesChef
 	{
 		public string Nombre { get; init; }
 		public double Cedula { get; init; }
@@ -19,8 +19,9 @@ namespace Catering.DDD.Dominio.Chef.ObjetosdeValor.ObjetosdeValorChef
 			this.Idiomas = idiomas;
 			this.Especialidad = especialidad;
 		}
+        public DatosPersonalesChef() { }
 
-		public static DatosPersonalesChef Create(string nombre, double cedula, string celular, string experiencia, string idiomas,string especialidad)
+        public static DatosPersonalesChef Create(string nombre, double cedula, string celular, string experiencia, string idiomas,string especialidad)
 		{
 			validate(nombre);
 			validate(celular);
@@ -29,6 +30,8 @@ namespace Catering.DDD.Dominio.Chef.ObjetosdeValor.ObjetosdeValorChef
 
 			return new DatosPersonalesChef(nombre, cedula, celular, experiencia, idiomas, especialidad);
 		}
+
+
 
 		//Validación de los objetos de valor de chef
 		public static void validate(string s)

@@ -19,6 +19,7 @@ namespace Catering.DDD.Dominio.Chef.Entidades
             {
                 chef.SetMenuAgregate(menuAgregadoEvent.Menu);
             }
+
             if (ev.Find(e => e.GetType() == typeof(CocineroAgregado)) is CocineroAgregado cocineroAgregadoEvent)
             {
                 chef.AgregarCocineroAgregate(cocineroAgregadoEvent.Cocinero);
@@ -33,27 +34,27 @@ namespace Catering.DDD.Dominio.Chef.Entidades
                         chef.SetDatosPersonalesAgregate(datosPersonales.PersonalData);
                         break;
                     case ContratodeChefAgregado contratoChef:
-                        chef.SetContrato(contratoChef.ContratoChef);
+                        chef.SetContratoAgregate(contratoChef.ContratoChef);
                         break;
                     case EspecialidaddeChefAgregada especialidadChef:
-                        chef.SetEspecialidad(especialidadChef.Especialidad);
+                        chef.SetEspecialidadAgregate(especialidadChef.Especialidad);
                         break;
                     //Cocinero
                     case DatosPersonalesCocineroAgregados datosPersonalesCocinero:
-                        chef.AgregarDatosPersonalesCocinero(datosPersonalesCocinero.DatosPersonales);
+                        chef.Cocinero.SetDatosPersonales(datosPersonalesCocinero.DatosPersonales);
                         break;
                     case ContratoCocineroAgregado contratoCocinero:
-                        chef.AgregarContratoCocinero(contratoCocinero.Contrato);
+                        chef.Cocinero.SetContrato(contratoCocinero.Contrato);
                         break;
                     case EspecialidadCocineroAgregada especialidadCocinero:
-                        chef.AgregarEspecialidadCocinero(especialidadCocinero.Especialidad);
+                        chef.Cocinero.SetEspecialidad(especialidadCocinero.Especialidad);
                         break;
                     //Menu
                     case PlatilloMenuAgregado platilloMenu:
-                        chef.AgregarPlatilloMenu(platilloMenu.Platillo);
+                        chef.menu.SetPlatillo(platilloMenu.Platillo);
                         break;
                     case TipoMenuAgregado tipoMenu:
-                        chef.AgregarTipoMenu(tipoMenu.Tipo);
+                        chef.menu.SetTipo(tipoMenu.Tipo);
                         break;
                 }
 

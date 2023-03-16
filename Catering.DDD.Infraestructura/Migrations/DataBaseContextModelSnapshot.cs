@@ -23,8 +23,11 @@ namespace Catering.DDD.Infraestructura.Migrations
 
             modelBuilder.Entity("Catering.DDD.Dominio.Generics.StoredEvent", b =>
                 {
-                    b.Property<string>("StoredId")
-                        .HasColumnType("nvarchar(450)");
+                    b.Property<int>("StoredId")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("StoredId"));
 
                     b.Property<string>("AggregateId")
                         .IsRequired()

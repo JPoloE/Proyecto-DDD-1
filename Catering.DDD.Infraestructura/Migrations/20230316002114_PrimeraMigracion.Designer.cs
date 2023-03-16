@@ -11,8 +11,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace Catering.DDD.Infraestructura.Migrations
 {
     [DbContext(typeof(DataBaseContext))]
-    [Migration("20230315201324_MigracionInicial")]
-    partial class MigracionInicial
+    [Migration("20230316002114_PrimeraMigracion")]
+    partial class PrimeraMigracion
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -26,8 +26,11 @@ namespace Catering.DDD.Infraestructura.Migrations
 
             modelBuilder.Entity("Catering.DDD.Dominio.Generics.StoredEvent", b =>
                 {
-                    b.Property<string>("StoredId")
-                        .HasColumnType("nvarchar(450)");
+                    b.Property<int>("StoredId")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("StoredId"));
 
                     b.Property<string>("AggregateId")
                         .IsRequired()

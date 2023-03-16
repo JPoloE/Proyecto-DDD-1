@@ -11,6 +11,7 @@ namespace Catering.DDD.Dominio.Chef.ObjetosdeValor.ObjetodeValorCocinero
             this.TipoContrato = tipoContrato;
             this.FormaPago = formaPago;
         }
+        public ContratoCocinero() { }
 
         public static ContratoCocinero Create(string tipoContrato, string formaPago)
         {

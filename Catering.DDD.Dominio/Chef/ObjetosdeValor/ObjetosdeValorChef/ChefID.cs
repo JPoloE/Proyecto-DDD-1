@@ -7,7 +7,8 @@ namespace Catering.DDD.Dominio.Chef.ObjetosdeValor.ObjetosdeValorChef
 	
 		public ChefID(Guid id) : base(id){}
 
-		public static ChefID Of(Guid id) {
+		public static ChefID Of(Guid id) 
+		{
 			return new ChefID(id);
 		}
 

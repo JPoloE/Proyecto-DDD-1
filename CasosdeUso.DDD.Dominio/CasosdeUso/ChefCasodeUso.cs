@@ -4,8 +4,10 @@ using Catering.DDD.Dominio.Chef.Entidades;
 using Catering.DDD.Dominio.Chef.Eventos;
 using Catering.DDD.Dominio.Chef.ObjetosdeValor.ObjetodeValorCocinero;
 using Catering.DDD.Dominio.Chef.ObjetosdeValor.ObjetosdeValorChef;
+using Catering.DDD.Dominio.Chef.ObjetosdeValor.ObjetosdeValorMenu;
 using Catering.DDD.Dominio.Comandos;
 using Catering.DDD.Dominio.Generics;
+using Catering.DDD.Dominio.Menu.ObjetosdeValor.ObjetosdeValorMenu;
 using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
@@ -45,7 +47,16 @@ namespace CasosdeUso.DDD.Dominio.CasosdeUso
                 comando.Idiomas,
                 comando.Especialidad
                 );
+            var contratoChef = ContratoChef.Create(
+                comando.TipoContrato,
+                comando.FormaPago
+                );
+            var especialidadChef = EspecialidadChef.Create(
+                comando.Especialidad
+                );
             chef.SetDatosPersonales( datosPersonales );
+            chef.SetContrato(contratoChef);
+            chef.SetEspecialidad(especialidadChef);
             List<EventodeDominio> eventodeDominios = chef.getUncommittedChanges();
             await SaveEvents(eventodeDominios);
 
@@ -54,16 +65,72 @@ namespace CasosdeUso.DDD.Dominio.CasosdeUso
             return chef;
         }
 
-        public Task<Chef> AgregarCocinero(AgregarCocineroComando comando)
+        public async Task<Chef> AgregarCocinero(AgregarCocineroComando comando)
         {
-            throw new NotImplementedException();
+            var chefChangeApply = new ChefChangeApply();
+            var listDomainEvents = await GetEventsByAggregateID(comando.ChefId);
+            var chefID = ChefID.Of(Guid.Parse(comando.ChefId));
+            var chefRebuild = chefChangeApply.CreateAggregate(listDomainEvents, chefID);
+
+            var cocinero = new Cocinero(CocineroID.Of(Guid.NewGuid()));
+            var datosPersonales = DatosPersonalesCocinero.Create(
+                comando.Nombre,
+                comando.Cedula,
+                comando.Celular,
+                comando.Experiencia,
+                comando.Idiomas
+                );
+            var contratoCocinero = ContratoCocinero.Create(
+                comando.TipoContrato,
+                comando.FormaPago
+                );
+            var especialidadCocinero = EspecialidadCocinero.Create(
+                comando.Especialidad
+                );
+            chefRebuild.SetCocinero(cocinero);
+            chefRebuild.AgregarDatosPersonalesCocinero(datosPersonales);
+            chefRebuild.AgregarContratoCocinero(contratoCocinero);
+            chefRebuild.AgregarEspecialidadCocinero(especialidadCocinero);
+            List<EventodeDominio> eventosDeDominio = chefRebuild.getUncommittedChanges();
+            await SaveEvents(eventosDeDominio);
+
+            chefChangeApply = new ChefChangeApply();
+            listDomainEvents = await GetEventsByAggregateID(comando.ChefId);
+            chefRebuild = chefChangeApply.CreateAggregate(listDomainEvents, chefID);
+
+            return chefRebuild;
         }
 
-        public Task<Chef> AgregarMenu(AgregarMenuComando comando)
+        public async Task<Chef> AgregarMenu(AgregarMenuComando comando)
         {
-            throw new NotImplementedException();
-        }
+            var chefChangeApply = new ChefChangeApply();
+            var listDomainEvents = await GetEventsByAggregateID(comando.ChefId);
+            var chefID = ChefID.Of(Guid.Parse(comando.ChefId));
+            var chefRebuild = chefChangeApply.CreateAggregate(listDomainEvents, chefID);
 
+            var menu = new Menu(MenuID.Of(Guid.NewGuid()));
+            var tipoMenu = Tipo.Create(
+                comando.TipoMenu,
+                comando.Detalles
+                );
+            var platillo = Platillo.Create(
+                comando.NombrePlatillo,
+                comando.Cantidad,
+                comando.Restriccion,
+                comando.TipoPlatillo
+                );
+            chefRebuild.SetMenu(menu);
+            chefRebuild.AgregarTipoMenu(tipoMenu);
+            chefRebuild.AgregarPlatilloMenu(platillo);
+            List<EventodeDominio> eventosDeDominio = chefRebuild.getUncommittedChanges();
+            await SaveEvents(eventosDeDominio);
+
+            chefChangeApply = new ChefChangeApply();
+            listDomainEvents = await GetEventsByAggregateID(comando.ChefId);
+            chefRebuild = chefChangeApply.CreateAggregate(listDomainEvents, chefID);
+
+            return chefRebuild;
+        }
 
 
 
@@ -129,7 +196,7 @@ namespace CasosdeUso.DDD.Dominio.CasosdeUso
 
             return listadoStoredEvents.Select(ev =>
             {
-                string nombre = $"VirtualEducation.DDD.Domain.Student.Events.{ev.StoredName}, VirtualEducation.DDD.Domain";
+                string nombre = $"Catering.DDD.Dominio.Chef.Eventos.{ev.StoredName}, Catering.DDD.Dominio";
                 Type tipo = Type.GetType(nombre);
                 EventodeDominio eventoParseado = (EventodeDominio)JsonConvert.DeserializeObject(ev.EventBody, tipo);
                 return eventoParseado;

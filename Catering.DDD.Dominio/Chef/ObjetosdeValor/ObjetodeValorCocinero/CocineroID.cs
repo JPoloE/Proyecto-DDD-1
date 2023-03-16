@@ -7,10 +7,7 @@ namespace Catering.DDD.Dominio.Chef.ObjetosdeValor.ObjetodeValorCocinero
 	public class CocineroID : Identidad
 	{
 
-        internal CocineroID(Guid id) : base(id)
-        {
-  
-        }
+        internal CocineroID(Guid id) : base(id) { }
 
         public static CocineroID Of(Guid id)
         {

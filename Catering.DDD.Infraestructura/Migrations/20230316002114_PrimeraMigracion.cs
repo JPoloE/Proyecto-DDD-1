@@ -5,7 +5,7 @@
 namespace Catering.DDD.Infraestructura.Migrations
 {
     /// <inheritdoc />
-    public partial class MigracionInicial : Migration
+    public partial class PrimeraMigracion : Migration
     {
         /// <inheritdoc />
         protected override void Up(MigrationBuilder migrationBuilder)
@@ -14,7 +14,8 @@ namespace Catering.DDD.Infraestructura.Migrations
                 name: "storedEvent",
                 columns: table => new
                 {
-                    StoredId = table.Column<string>(type: "nvarchar(450)", nullable: false),
+                    StoredId = table.Column<int>(type: "int", nullable: false)
+                        .Annotation("SqlServer:Identity", "1, 1"),
                     StoredName = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     AggregateId = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     EventBody = table.Column<string>(type: "nvarchar(max)", nullable: false)

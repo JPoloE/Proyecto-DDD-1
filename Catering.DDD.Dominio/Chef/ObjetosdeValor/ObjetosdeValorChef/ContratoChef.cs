@@ -11,13 +11,15 @@ namespace Catering.DDD.Dominio.Chef.ObjetosdeValor.ObjetosdeValorChef
 			this.TipoContrato = tipoContrato;
 			this.FormaPago = formaPago;
 		}
+        public ContratoChef() { }
 
-		public static ContratoChef Create(string tipoContrato, string formaPago)
+        public static ContratoChef Create(string tipoContrato, string formaPago)
 		{
 			validate(tipoContrato);
 			validate(formaPago);
 			return new ContratoChef(tipoContrato, formaPago);
 		}
+
 
         //Validación de los objetos de valor de chef
         public static void validate(string s)

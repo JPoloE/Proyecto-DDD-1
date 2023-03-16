@@ -12,10 +12,8 @@ namespace Catering.DDD.Dominio.Comandos
         public Identidad(Guid uuid) 
         {
             if (uuid == Guid.Empty) 
-            {
                 throw new ArgumentException("El Id no puede ser vacio");
-                this.Uuid = uuid;
-            }
+            Uuid = uuid;
         }
     }
 }
