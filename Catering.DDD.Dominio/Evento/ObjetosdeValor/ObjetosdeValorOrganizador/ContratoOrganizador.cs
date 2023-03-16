@@ -21,7 +21,7 @@ namespace Catering.DDD.Dominio.Evento.ObjetosdeValor.ObjetosdeValorOrganizador
             return new ContratoOrganizador(tipoContrato, formaPago);
         }
 
-        //Validación de los objetos de valor de chef
+        //Validación de los objetos de valor de organizador
         public static void validate(string s)
         {
             if (s == null)

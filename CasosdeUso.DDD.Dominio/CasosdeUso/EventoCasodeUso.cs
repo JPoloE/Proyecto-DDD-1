@@ -45,8 +45,12 @@ namespace CasosdeUso.DDD.Dominio.CasosdeUso
             var tipo = TipoEvento.Create(
                 comando.TipoEvento
                 );
+            var agregados = AgregadosID.Create(
+                comando.ChefID
+                );
             evento.AgregarFechaEvento(fechaEvento);
             evento.AgregarTipoEvento(tipo);
+            evento.AgregarAgregadosEvento(agregados);
             List<EventodeDominio> eventodeDominios = evento.getUncommittedChanges();
             await SaveEvents(eventodeDominios);
 
@@ -136,6 +140,9 @@ namespace CasosdeUso.DDD.Dominio.CasosdeUso
                         break;
                     case TipoEventoAgreagdo tipoEvento:
                         stored.EventBody = JsonConvert.SerializeObject(tipoEvento);
+                        break;
+                    case AgregadosdeEventosAgregados agregado:
+                        stored.EventBody = JsonConvert.SerializeObject(agregado);
                         break;
                     //Organizador
                     case OrganizadorAgregado organizadorAgregado:

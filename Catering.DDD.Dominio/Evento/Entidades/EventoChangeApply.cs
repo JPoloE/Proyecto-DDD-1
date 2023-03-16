@@ -39,6 +39,9 @@ namespace Catering.DDD.Dominio.Evento.Entidades
                     case UbicacionAgregada ubicacion:
                         evento.SetUbicacion(ubicacion.Ubicacion);
                         break;
+                    case AgregadosdeEventosAgregados agregados:
+                        evento.SetAgregados(agregados.Agregados);
+                        break;
                     //Organizador
                     case DatosPersonalesOrganizadorAgregado datosPersonalesOrganizador:
                         evento.Organizador.SetDatosPersonales(datosPersonalesOrganizador.DatosPersonales);

@@ -22,6 +22,7 @@ namespace Catering.DDD.Dominio.Chef.Entidades
 			this.Id = id;
 		}
 
+		//Chef
 		public void SetChefID(ChefID chefID)
 		{
 			AppendChange(new ChefCreado(Id.ToString()));
@@ -41,12 +42,9 @@ namespace Catering.DDD.Dominio.Chef.Entidades
 			AppendChange(new EspecialidaddeChefAgregada(especialidadChef));
         }
 
-		public void SetCocinero(Cocinero cocinero) 
-		{
-			AppendChange(new CocineroAgregado(cocinero));
-		}
+		//Menu
 
-		public void SetMenu(Menu menu)
+        public void SetMenu(Menu menu)
 		{
 			AppendChange(new MenuAgregado(menu));
 		}
@@ -60,8 +58,12 @@ namespace Catering.DDD.Dominio.Chef.Entidades
 		{
 			AppendChange(new TipoMenuAgregado(tipo));
 		}
-
-		public void AgregarDatosPersonalesCocinero(DatosPersonalesCocinero datosPersonales)
+        //Cocinero
+        public void SetCocinero(Cocinero cocinero)
+        {
+            AppendChange(new CocineroAgregado(cocinero));
+        }
+        public void AgregarDatosPersonalesCocinero(DatosPersonalesCocinero datosPersonales)
 		{
 			AppendChange(new DatosPersonalesCocineroAgregados(datosPersonales));
 		}
@@ -77,7 +79,7 @@ namespace Catering.DDD.Dominio.Chef.Entidades
 		}
 
 
-
+		//chef
         public void SetDatosPersonalesAgregate(DatosPersonalesChef datosPersonales)
 		{
 			this.DatosPersonales = datosPersonales;
@@ -92,7 +94,7 @@ namespace Catering.DDD.Dominio.Chef.Entidades
 		{
 			this.Contrato = contrato;
 		}
-
+		//Cocinero
 		public void AgregarCocineroAgregate(Cocinero cocinero)
 		{
 			this.Cocinero = cocinero;

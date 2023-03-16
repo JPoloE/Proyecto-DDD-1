@@ -14,6 +14,7 @@ namespace Catering.DDD.Dominio.Evento.Entidades
 		public EventoID Id { get; init; }
 		public Fecha FechaEvento { get; private set; }
 		public TipoEvento TipoEvento { get; private set; }
+        public AgregadosID AgregadosID { get; private set; }
 		public virtual Organizador Organizador { get; private set; }
 		public virtual Ubicacion Ubicacion { get; private set; }
 
@@ -34,6 +35,10 @@ namespace Catering.DDD.Dominio.Evento.Entidades
         public void AgregarTipoEvento(TipoEvento tipo)
         {
             AppendChange(new TipoEventoAgreagdo(tipo));
+        }
+        public void AgregarAgregadosEvento(AgregadosID agregados)
+        {
+            AppendChange(new AgregadosdeEventosAgregados(agregados));
         }
 		//Ubicacion
         public void AgregarUbicacionEvento(Ubicacion ubicacion)
@@ -78,6 +83,11 @@ namespace Catering.DDD.Dominio.Evento.Entidades
         public void SetUbicacion(Ubicacion ubicacion)
         {
             Ubicacion = ubicacion;
+        }
+
+        public void SetAgregados(AgregadosID agregados)
+        {
+            AgregadosID = agregados;
         }
     }
 }
