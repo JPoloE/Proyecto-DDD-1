@@ -1,26 +1,22 @@
 ﻿using System;
 using Catering.DDD.Dominio.Chef.ObjetosdeValor.ObjetodeValorCocinero;
+using Catering.DDD.Dominio.Comandos;
 
 namespace Catering.DDD.Dominio.Evento.ObjetosdeValor.ObjetosdeValorEvento
 {
-	public record EventoID
+	public class EventoID : Identidad
 	{
-        public Guid value { get; init; }
 
-        internal EventoID(Guid value_)
+        internal EventoID(Guid value_) : base(value_) 
         {
-            value = value_;
+
         }
 
-        public static EventoID Create(Guid value)
+        public static EventoID Of(Guid value)
         {
             return new EventoID(value);
         }
 
-        public static implicit operator Guid(EventoID cocineroID)
-        {
-            return cocineroID.value;
-        }
     }
 }
 

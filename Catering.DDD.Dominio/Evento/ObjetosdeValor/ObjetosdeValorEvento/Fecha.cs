@@ -1,7 +1,7 @@
 ﻿using System;
 namespace Catering.DDD.Dominio.Evento.ObjetosdeValor.ObjetosdeValorEvento
 {
-	public record Fecha
+	public class Fecha
 	{
 		public string FechaEvento { get; init; }
 
@@ -9,7 +9,7 @@ namespace Catering.DDD.Dominio.Evento.ObjetosdeValor.ObjetosdeValorEvento
 		{
 			this.FechaEvento = fechaEvento;
 		}
-
+		public Fecha() { }
 		public static Fecha Create(string fechaEvento)
 		{
 			validate(fechaEvento);

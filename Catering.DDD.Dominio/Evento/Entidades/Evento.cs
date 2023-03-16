@@ -1,49 +1,79 @@
 ﻿using System;
+using Catering.DDD.Dominio.Chef.Eventos;
+using Catering.DDD.Dominio.Chef.ObjetosdeValor.ObjetosdeValorChef;
+using Catering.DDD.Dominio.Comandos;
+using Catering.DDD.Dominio.Evento.Eventos;
 using Catering.DDD.Dominio.Evento.ObjetosdeValor.ObjetosdeValorEvento;
 using Catering.DDD.Dominio.Evento.ObjetosdeValor.ObjetosdeValorOrganizador;
 using Catering.DDD.Dominio.Evento.ObjetosdeValor.ObjetosdeValorUbicacion;
 
 namespace Catering.DDD.Dominio.Evento.Entidades
 {
-	public class Evento
+	public class Evento : AgregarEvento<EventoID>
 	{
-		public Guid Id { get; init; }
+		public EventoID Id { get; init; }
 		public Fecha FechaEvento { get; private set; }
-		public Tipo TipoEvento { get; private set; }
-		public OrganizadorID OrganizadorID { get; private set; }
+		public TipoEvento TipoEvento { get; private set; }
 		public virtual Organizador Organizador { get; private set; }
-		public UbicacionID UbicacionID { get; private set; }
 		public virtual Ubicacion Ubicacion { get; private set; }
 
-		public Evento(Guid id)
+		public Evento(EventoID id) : base(id)
 		{
-			this.Id = id;
+			Id = id;
 		}
 
-		public void SetFechaEvento(Fecha fechaEvento)
+		//Evento
+        public void AgregarEventoID(EventoID eventoID)
+        {
+            AppendChange(new EventoCreado(Id.ToString()));
+        }
+        public void AgregarFechaEvento(Fecha fecha)
+        {
+            AppendChange(new FechaEventoAgregada(fecha));
+        }
+        public void AgregarTipoEvento(TipoEvento tipo)
+        {
+            AppendChange(new TipoEventoAgreagdo(tipo));
+        }
+		//Ubicacion
+        public void AgregarUbicacionEvento(Ubicacion ubicacion)
+        {
+            AppendChange(new UbicacionAgregada(ubicacion));
+        }
+        public void AgregarDescripcionaUbicacion(Descripcion descripcion)
+        {
+            AppendChange(new DescripcionDeUbicacionAgregada(descripcion));
+        }
+        //Organizador
+        public void AgregarOrganizador(Organizador organizador)
+        {
+            AppendChange(new OrganizadorAgregado(organizador));
+        }
+        public void AgregarDatosPersonalesOrganizador(DatosPersonalesOrganizador datosPersonales)
+        {
+            AppendChange(new DatosPersonalesOrganizadorAgregado(datosPersonales));
+        }
+        public void AgregarContratoOrganizador(ContratoOrganizador contrato)
+        {
+            AppendChange(new ContratoOrganizadorAgregado(contrato));
+        }
+
+
+
+        public void SetFechaEvento(Fecha fechaEvento)
 		{
 			FechaEvento = fechaEvento;
 		}
 
-		public void SetTipoEvento(Tipo tipoEvento)
+		public void SetTipoEvento(TipoEvento tipoEvento)
 		{
 			TipoEvento = tipoEvento;
-		}
-
-		public void SetOrganizadorID(OrganizadorID organizadorID)
-		{
-			OrganizadorID = organizadorID;
 		}
 
 		public void SetOrganizador(Organizador organizador)
 		{
 			Organizador = organizador;
 		}
-
-        public void SetUbicacionID(UbicacionID ubicacionID)
-        {
-            UbicacionID = ubicacionID;
-        }
 
         public void SetUbicacion(Ubicacion ubicacion)
         {

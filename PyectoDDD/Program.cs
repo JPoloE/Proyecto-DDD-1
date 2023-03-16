@@ -19,6 +19,7 @@ builder.Services.AddDbContext<DataBaseContext>(options => options.UseSqlServer(
 
 builder.Services.AddScoped(typeof(IStoredEventRepository<>), typeof(StoredEventRepository<>));
 builder.Services.AddScoped<IChefCasodeUso, ChefCasodeUso>();
+builder.Services.AddScoped<IEventoCasodeUso, EventoCasodeUso>();
 
 var app = builder.Build();
 

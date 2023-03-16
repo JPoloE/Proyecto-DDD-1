@@ -30,18 +30,14 @@
     <None Remove="Encargado\ObjetosdeValor\ObjetosdeValorBarman\" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Evento\" />
     <Folder Include="Chef\Repositorios\" />
     <Folder Include="Chef\ObjetosdeValor\" />
     <Folder Include="Encargado\Entidades\" />
     <Folder Include="Encargado\ObjetosdeValor\" />
-    <Folder Include="Evento\Entidades\" />
     <Folder Include="Evento\Respositorios\" />
-    <Folder Include="Evento\ObjetosdeValor\" />
     <Folder Include="Chef\ObjetosdeValor\ObjetosdeValorChef\" />
     <Folder Include="Chef\ObjetosdeValor\ObjetosdeValorMenu\" />
     <Folder Include="Chef\ObjetosdeValor\ObjetodeValorCocinero\" />
-    <Folder Include="Evento\ObjetosdeValor\ObjetosdeValorEvento\" />
     <Folder Include="Evento\ObjetosdeValor\ObjetosdeValorOrganizador\" />
     <Folder Include="Evento\ObjetosdeValor\ObjetosdeValorUbicacion\" />
     <Folder Include="Encargado\ObjetosdeValor\ObjetosdeValorEncargado\" />

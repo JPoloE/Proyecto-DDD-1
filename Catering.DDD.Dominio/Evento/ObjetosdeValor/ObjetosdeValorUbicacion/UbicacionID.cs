@@ -1,25 +1,19 @@
 ﻿using System;
 using Catering.DDD.Dominio.Chef.ObjetosdeValor.ObjetodeValorCocinero;
+using Catering.DDD.Dominio.Comandos;
 
 namespace Catering.DDD.Dominio.Evento.ObjetosdeValor.ObjetosdeValorUbicacion
 {
-	public record UbicacionID
+	public class UbicacionID : Identidad
 	{
-        public Guid value { get; init; }
 
-        internal UbicacionID(Guid value_)
+        internal UbicacionID(Guid value_) : base(value_)
         {
-            value = value_;
         }
 
-        public static UbicacionID Create(Guid value)
+        public static UbicacionID Of(Guid value)
         {
             return new UbicacionID(value);
-        }
-
-        public static implicit operator Guid(UbicacionID cocineroID)
-        {
-            return cocineroID.value;
         }
     }
 }

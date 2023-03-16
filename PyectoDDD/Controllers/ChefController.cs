@@ -1,6 +1,8 @@
 ﻿using CasosdeUso.DDD.Dominio.Gateways;
 using Catering.DDD.Dominio.Chef.Comandos;
 using Catering.DDD.Dominio.Chef.Entidades;
+using Catering.DDD.Dominio.Evento.Comandos;
+using Catering.DDD.Dominio.Evento.Entidades;
 using Microsoft.AspNetCore.Mvc;
 
 namespace PyectoDDD.Controllers
@@ -10,6 +12,7 @@ namespace PyectoDDD.Controllers
     public class ChefController : Controller
     {
         private readonly IChefCasodeUso _casoDeUso;
+
 
         public ChefController(IChefCasodeUso chefCasodeUso)
         {
@@ -43,5 +46,6 @@ namespace PyectoDDD.Controllers
             var cocineroAgregado = await _casoDeUso.AgregarCocinero(command);
             return cocineroAgregado;
         }
+
     }
 }

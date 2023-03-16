@@ -16,6 +16,8 @@ namespace Catering.DDD.Dominio.Evento.ObjetosdeValor.ObjetosdeValorUbicacion
 			this.AguaPotable = aguaPotable;
 		}
 
+		public Descripcion() { }
+
 		public static Descripcion Create(int capacidaddePersonas, string capacidaddeMesas, string electricidad, string aguaPotable)
 		{
 			validateInt(capacidaddePersonas);

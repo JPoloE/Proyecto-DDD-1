@@ -2,16 +2,17 @@
 
 namespace Catering.DDD.Dominio.Evento.ObjetosdeValor.ObjetosdeValorOrganizador
 {
-	public record ContratoOrganizador
+	public class ContratoOrganizador
 	{
-        string TipoContrato { get; init; }
-        string FormaPago { get; init; }
+       public string TipoContrato { get; init; }
+       public string FormaPago { get; init; }
 
         internal ContratoOrganizador(string tipoContrato, string formaPago)
         {
             this.TipoContrato = tipoContrato;
             this.FormaPago = formaPago;
         }
+        public ContratoOrganizador() { }
 
         public static ContratoOrganizador Create(string tipoContrato, string formaPago)
         {

@@ -1,7 +1,7 @@
 ﻿using System;
 namespace Catering.DDD.Dominio.Evento.ObjetosdeValor.ObjetosdeValorOrganizador
 {
-	public record DatosPersonalesOrganizador
+	public class DatosPersonalesOrganizador
 	{
         public string Nombre { get; init; }
         public double Cedula { get; init; }
@@ -17,6 +17,7 @@ namespace Catering.DDD.Dominio.Evento.ObjetosdeValor.ObjetosdeValorOrganizador
             this.Experiencia = experiencia;
             this.Idiomas = idiomas;
         }
+        public DatosPersonalesOrganizador() { }
 
         public static DatosPersonalesOrganizador Create(string nombre, double cedula, string celular, string experiencia, string idiomas)
         {
